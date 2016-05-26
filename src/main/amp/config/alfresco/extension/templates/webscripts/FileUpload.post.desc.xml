@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Ecm admin webscript - count current ticket</shortname>
+    <description>Count current ticket</description>
+    <url>/alfrescoUploadApi/FileUpload</url>
+    <authentication>user</authentication>
+    <format default="json"/>
+    <family>Ecm Admin - Ticket</family>
+</webscript>

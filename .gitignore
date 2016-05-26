@@ -1,0 +1,10 @@
+alf_data_dev
+*.swp
+*~*
+*.amp
+*.jar
+tomcat
+target
+*.idea
+*.iml
+
