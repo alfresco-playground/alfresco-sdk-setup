@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by recovery on 9/1/14.
@@ -37,6 +38,7 @@ public class FileUpload extends AbstractWebScript {
     private NodeService nodeService;
     private ContentService contentService;
     private CheckOutCheckInService checkOutCheckInService;
+    private static Map<String,String> pathUuid = Collections.synchronizedMap(new HashMap<String,String>());
 
     static {
         String prop = System.getProperty("log4j.configuration");
@@ -96,6 +98,16 @@ public class FileUpload extends AbstractWebScript {
      */
     private NodeRef createFolder(String path) throws FileNotFoundException {
 
+        if(pathUuid.containsKey(path)) {
+            String uuid = pathUuid.get(path);
+            String ref = "workspace://SpacesStore/" + uuid;
+            NodeRef node = new NodeRef(ref);
+            if(node != null) {
+                System.out.println(String.format("|| hit | %s | %s", path, ref));
+                return node;
+            }
+        }
+
         logger.info("|| check directory | " + path);
         final NodeRef companyHome = repository.getCompanyHome();
         final List<String> pathElements = Arrays.asList(path.split("/"));
@@ -109,6 +121,13 @@ public class FileUpload extends AbstractWebScript {
                 String folderName = pathElements.get(i);
                 logger.info("|| create sub directory | " + folderName);
                 currentNode = fileFolderService.create(currentNode, folderName, ContentModel.TYPE_FOLDER).getNodeRef();
+
+                String currentPath = String.join("/", pathElements.subList(0, i));
+                if(pathUuid.containsKey(currentPath) == false) {
+                    System.out.println(String.format("|| miss | %s", currentPath));
+                    pathUuid.put(currentPath, currentNode.getId());
+                }
+
             } else {
                 currentNode = node;
             }
@@ -230,6 +249,9 @@ public class FileUpload extends AbstractWebScript {
      */
     @Override
     public void execute(WebScriptRequest req, WebScriptResponse res) throws IOException {
+
+        System.out.println(req.getContent().getContent());
+
         //synchronized (this) {
         synchronizedExecute(req, res);
         //}
@@ -240,14 +262,15 @@ public class FileUpload extends AbstractWebScript {
         long start = System.currentTimeMillis();
         logger.info("|| instance id | " + random);
 
-        final FormData form = (FormData) req.parseContent();
-        final FormData.FormField file = getField(form, "file");
-        final FormData.FormField json = getField(form, "json");
-        final String raw = json.getContent().getContent();
-        final String body = java.net.URLDecoder.decode(raw, "UTF-8");
         final UploadResponse response = new UploadResponse();
 
         try {
+            final FormData form = (FormData) req.parseContent();
+            final FormData.FormField file = getField(form, "file");
+            final FormData.FormField json = getField(form, "json");
+            final String raw = json.getContent().getContent();
+            final String body = java.net.URLDecoder.decode(raw, "UTF-8");
+
             // request metadata.
             final UploadRequest request = UploadRequest.fromJson(body);
             final String folder = request.getPath();

@@ -17,6 +17,7 @@ public class UploadResponse {
         obj.put("uuid", uuid);
         obj.put("success", success);
         obj.put("error", error);
+        obj.put("hello", "world");
         return obj.toString();
     }
 

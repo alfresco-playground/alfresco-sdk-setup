@@ -27,7 +27,7 @@ private ContentService contentService;
 -->
 
 <beans>
-    <bean id="alfrescoUplaodApi.fileUpload.post" class="alfrescoUploadApi.FileUpload" parent="webscript">
+    <bean id="webscript.FileUpload.post" class="alfrescoUploadApi.FileUpload" parent="webscript">
         <property name="repository"> <ref bean="repositoryHelper"/> </property>
 
         <!--

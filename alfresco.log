@@ -1,0 +1,49 @@
+11:23:56,769 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 398 Web Scripts (+0 failed), 548 URLs
+11:23:56,774 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+11:23:56,774 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+11:23:56,779 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] Initialised Repository Web Script Container (in 5633.2124ms)
+11:24:00,322 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 398 Web Scripts (+0 failed), 548 URLs
+11:24:00,322 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+11:24:00,322 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+11:29:50,373 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 398 Web Scripts (+0 failed), 548 URLs
+11:29:50,374 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+11:29:50,374 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+11:29:50,380 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] Initialised Repository Web Script Container (in 5579.8643ms)
+11:29:53,090 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 398 Web Scripts (+0 failed), 548 URLs
+11:29:53,090 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+11:29:53,090 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+11:34:49,852 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'Replication' subsystem, ID: [Replication, default]
+11:34:49,857 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'Replication' subsystem, ID: [Replication, default]
+11:34:49,930 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'Subscriptions' subsystem, ID: [Subscriptions, default]
+11:34:49,934 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'Subscriptions' subsystem, ID: [Subscriptions, default]
+11:34:49,935 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'email' subsystem, ID: [email, inbound]
+11:34:49,939 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'email' subsystem, ID: [email, inbound]
+11:34:49,940 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'fileServers' subsystem, ID: [fileServers, default]
+11:34:49,969 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'fileServers' subsystem, ID: [fileServers, default]
+11:34:49,977 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+11:34:49,986 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+11:34:49,987 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:49,988 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:49,994 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'OOoDirect' subsystem, ID: [OOoDirect, default]
+11:34:50,001 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'OOoDirect' subsystem, ID: [OOoDirect, default]
+11:34:50,001 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+11:34:50,002 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+11:34:50,003 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'Synchronization' subsystem, ID: [Synchronization, default]
+11:34:50,007 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'Synchronization' subsystem, ID: [Synchronization, default]
+11:34:50,023 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'email' subsystem, ID: [email, outbound]
+11:34:50,030 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'email' subsystem, ID: [email, outbound]
+11:34:50,048 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'imap' subsystem, ID: [imap, default]
+11:34:50,052 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'imap' subsystem, ID: [imap, default]
+11:34:50,583 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'Search' subsystem, ID: [Search, hidden]
+11:34:51,058 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'Search' subsystem, ID: [Search, hidden]
+11:34:51,257 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:51,258 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:51,258 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'thirdparty' subsystem, ID: [thirdparty, default]
+11:34:51,260 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'thirdparty' subsystem, ID: [thirdparty, default]
+11:34:51,262 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:51,263 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+11:34:51,265 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+11:34:51,266 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopping 'sysAdmin' subsystem, ID: [sysAdmin, default]
+11:34:51,266 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Stopped 'sysAdmin' subsystem, ID: [sysAdmin, default]
+11:34:51,267 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+11:34:51,269 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
